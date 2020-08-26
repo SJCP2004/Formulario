@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tablas</title>
+    <link rel="stylesheet" href="../../CursoBootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div table-responsive></div>
+        <br>
+        <table class="table table-striped table-bordered table-hover">
+            <tr class="success">
+             <th># ID</th>
+             <th>Nombres</th>
+             <th>Opciones</th>
+             <th>Archicos</th>
+            </tr>
+            <tr class="info">
+             <td>1</td>
+             <td id="sebas">Nombre</td>
+             <td id="nana">Opcion</td>
+             <td>Archivo</td>
+            </tr>
+            <tr class="warning">
+             <td>2</td>
+             <td>Nombre</td>
+             <td>Opcion</td>
+             <td>Archivo</td>
+            </tr>   
+            <tr class="danger">
+             <td>3</td>
+             <td>Nombre</td>
+             <td>Opcion</td> 
+             <td>Archivo</td>
+          </tr>
+            <tr class="info">
+            <td>4</td>
+            <td>Nombre</td>
+            <td>Opcion</td>
+            <td>Archivo</td>
+           </tr>
+            <tr class="warning">
+            <td>5</td>
+            <td>Nombre</td>
+            <td>Opcion</td>
+            <td>Archivo</td>
+            </tr>   
+           <tr class="danger">
+            <td>6</td>
+            <td>Nombre</td>
+            <td>Opcion</td>
+            <td>Archivo</td>
+               </tr>
+        </table>
+
+    </div>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="../../CursoBootstrap/bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
+    <script src="../../CursoBootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script>
+        function getUrlVars(){
+            var vars={};
+            var parts=window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value){
+                vars[key] = value;
+            });
+            return vars;
+        }
+        $(function() {
+            var name = getUrlVars()["nombre"];
+            var option = getUrlVars()["opcion"];
+            //console.log('El parametro tiene: '+name);
+            $("#sebas").html(name);
+            $("#nana").html(option);
+            //console.log(epa);
+        });
+
+    </script>
+</body> 
+</html>

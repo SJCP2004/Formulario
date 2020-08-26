@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../../CursoBootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <br>
+        <form action="#" class="form-group has-error">
+            <div class="form-group has-success">
+                <label for="Nombre">Corre electronico</label>
+                <input class="form-control" id="nombre" type="text" placeholder="Correo:">
+            </div> 
+
+            <div class="form-group has-warning">
+                <label for="option">Elige una opcion</label>
+                <select class="form-control" name="" id="option">
+                    <option value="">Opcion#1</option>
+                    <option value="">Opcion#2</option>
+                    <option value="">Opcion#3</option>
+                    <option value="">Opcion#4</option>
+                    <option value="">Opcion#5</option>
+                    <option value="">Opcion#6</option>
+                    <option value="">Opcion#7</option>
+                    <option value="">Opcion#8</option>
+                    <option value="">Opcion#9</option>
+                    <option value="">Opcion#10</option>
+                </select>
+            </div>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea class="form-control" id="mensaje" placeholder="Escribe tu mensaje"></textarea>
+
+            <label for="archivo">Archivo:</label>
+            <input type="file" id="archivo">
+            <p class="help-block">Maximo 70MB</p>
+
+                <a class="btn btn-default"
+                href="file:///C:/Dev/CursoBootstrap/nuevo/Mensaje.html">
+                    Regresar
+                </a>
+
+            <a class="btn btn-default"
+                id="enlace"
+                href="file:///C:/Dev/CursoBootstrap/tipografia.html/Tabla.html" target="blank">
+                Enviar
+            </a>
+            <button class="btn btn-primary" id="boton" >Recuerdame</button>
+  
+         </form>   
+    </div>
+    <script src="../../CursoBootstrap/bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
+    <script src="../../CursoBootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script>
+         $(function() {
+
+            $("#enlace").on("click", function(){
+                nombre = $("#nombre").val();
+                enlace = $("#enlace").attr('href');
+                opcion =  $("#option").find('option:selected').text();
+                archivo = $("#archivo").attr('href');
+                //console.log("Hola: "+nombre+' Enlace: '+enlace);
+                $("#enlace").attr('href',enlace+'?nombre='+nombre+'&opcion='+opcion);
+                //enlace = $("#enlace").attr('href');
+                //console.log('Ahora el enlace tiene: '+enlace);
+            });
+        });
+    </script>
+</body>
+</html>
